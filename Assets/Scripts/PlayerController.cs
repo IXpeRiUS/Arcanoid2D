@@ -27,10 +27,13 @@ public class PlayerController : MonoBehaviour
         // Обновляем позицию объекта
         transform.position = _position;
 
-        //запуск шара 
+        //запуск шара, если не запущен
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            ballForce.AddForceBall();
+            if (!ballForce.isForsed)
+            {
+                ballForce.AddForceBall();
+            }
         }
 
         //меню пауза
