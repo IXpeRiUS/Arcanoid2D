@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7784939843803119695}
   m_Layer: 0
   m_Name: 06
-  m_TagString: Untagged
+  m_TagString: Grey01Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,7 +129,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9166666, y: 0.7875}
+  m_Size: {x: 1.7, y: 0.5}
   m_EdgeRadius: 0
 --- !u!50 &7784939843803119695
 Rigidbody2D:
@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 4664770972314277564}
   m_Layer: 0
   m_Name: 01
-  m_TagString: Untagged
+  m_TagString: Grey01Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -287,7 +287,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9166666, y: 0.7875}
+  m_Size: {x: 1.7, y: 0.5}
   m_EdgeRadius: 0
 --- !u!50 &4664770972314277564
 Rigidbody2D:
@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 6848276585670054519}
   m_Layer: 0
   m_Name: 07
-  m_TagString: Untagged
+  m_TagString: Grey01Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -445,7 +445,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9166666, y: 0.7875}
+  m_Size: {x: 1.7, y: 0.5}
   m_EdgeRadius: 0
 --- !u!50 &6848276585670054519
 Rigidbody2D:
@@ -526,7 +526,7 @@ GameObject:
   - component: {fileID: 2356561484623983005}
   m_Layer: 0
   m_Name: 04
-  m_TagString: Untagged
+  m_TagString: Grey01Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -641,7 +641,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9166666, y: 0.7875}
+  m_Size: {x: 1.7, y: 0.5}
   m_EdgeRadius: 0
 --- !u!50 &2356561484623983005
 Rigidbody2D:
@@ -684,7 +684,7 @@ GameObject:
   - component: {fileID: 8925028669572683512}
   m_Layer: 0
   m_Name: 03
-  m_TagString: Untagged
+  m_TagString: Grey01Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -799,7 +799,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9166666, y: 0.7875}
+  m_Size: {x: 1.7, y: 0.5}
   m_EdgeRadius: 0
 --- !u!50 &8925028669572683512
 Rigidbody2D:
@@ -842,7 +842,7 @@ GameObject:
   - component: {fileID: 1900466501870630530}
   m_Layer: 0
   m_Name: 02
-  m_TagString: Untagged
+  m_TagString: Grey01Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -957,7 +957,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9166666, y: 0.7875}
+  m_Size: {x: 1.7, y: 0.5}
   m_EdgeRadius: 0
 --- !u!50 &1900466501870630530
 Rigidbody2D:
@@ -1000,7 +1000,7 @@ GameObject:
   - component: {fileID: 6716042709787593034}
   m_Layer: 0
   m_Name: 05
-  m_TagString: Untagged
+  m_TagString: Grey01Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1115,7 +1115,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9166666, y: 0.7875}
+  m_Size: {x: 1.7, y: 0.5}
   m_EdgeRadius: 0
 --- !u!50 &6716042709787593034
 Rigidbody2D:

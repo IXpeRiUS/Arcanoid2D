@@ -9,7 +9,7 @@ public class PauseButtonUI : MonoBehaviour
 {
     [SerializeField] Sprite _pauseImage;
     [SerializeField] Sprite _resumeImage;
-
+    //[SerializeField] PauseMenuUI _pauseMenu;
     [SerializeField] UnityEngine.UI.Image _pauseButtonImage;
 
     private void Start()
@@ -21,10 +21,12 @@ public class PauseButtonUI : MonoBehaviour
         if (pause)
         {
             _pauseButtonImage.sprite = _resumeImage;
+            
         }
         else
         {
             _pauseButtonImage.sprite = _pauseImage;
+            
         }
     }
 
