@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3357937156367592471}
   m_Layer: 0
   m_Name: 06
-  m_TagString: RedBrick
+  m_TagString: Red01Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,7 +129,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9166666, y: 0.7875}
+  m_Size: {x: 1.7, y: 0.5}
   m_EdgeRadius: 0
 --- !u!50 &3357937156367592471
 Rigidbody2D:
@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 1740817280955128850}
   m_Layer: 0
   m_Name: 03
-  m_TagString: RedBrick
+  m_TagString: Red01Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -287,7 +287,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9166666, y: 0.7875}
+  m_Size: {x: 1.7, y: 0.5}
   m_EdgeRadius: 0
 --- !u!50 &1740817280955128850
 Rigidbody2D:
@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 5726162077382963603}
   m_Layer: 0
   m_Name: 02
-  m_TagString: RedBrick
+  m_TagString: Red01Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -445,7 +445,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9166666, y: 0.7875}
+  m_Size: {x: 1.7, y: 0.5}
   m_EdgeRadius: 0
 --- !u!50 &5726162077382963603
 Rigidbody2D:
@@ -488,7 +488,7 @@ GameObject:
   - component: {fileID: 8566622454833218330}
   m_Layer: 0
   m_Name: 04
-  m_TagString: RedBrick
+  m_TagString: Red01Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -603,7 +603,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9166666, y: 0.7875}
+  m_Size: {x: 1.7, y: 0.5}
   m_EdgeRadius: 0
 --- !u!50 &8566622454833218330
 Rigidbody2D:
@@ -646,7 +646,7 @@ GameObject:
   - component: {fileID: 6431648096886929321}
   m_Layer: 0
   m_Name: 07
-  m_TagString: RedBrick
+  m_TagString: Red01Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -761,7 +761,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9166666, y: 0.7875}
+  m_Size: {x: 1.7, y: 0.5}
   m_EdgeRadius: 0
 --- !u!50 &6431648096886929321
 Rigidbody2D:
@@ -804,7 +804,7 @@ GameObject:
   - component: {fileID: 7704208588669072419}
   m_Layer: 0
   m_Name: 01
-  m_TagString: RedBrick
+  m_TagString: Red01Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -919,7 +919,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9166666, y: 0.7875}
+  m_Size: {x: 1.7, y: 0.5}
   m_EdgeRadius: 0
 --- !u!50 &7704208588669072419
 Rigidbody2D:
@@ -1000,7 +1000,7 @@ GameObject:
   - component: {fileID: 4957698227313184066}
   m_Layer: 0
   m_Name: 05
-  m_TagString: RedBrick
+  m_TagString: Red01Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1115,7 +1115,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9166666, y: 0.7875}
+  m_Size: {x: 1.7, y: 0.5}
   m_EdgeRadius: 0
 --- !u!50 &4957698227313184066
 Rigidbody2D:
