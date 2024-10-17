@@ -41,7 +41,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
         isPause = true;
         onPause?.Invoke(isPause);
-        //pauseButtonUI.SwitchButtonSprite(isPause);
     }
 
     private void ResumeGame()
@@ -65,6 +64,5 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
         isPause = false;
         onPause?.Invoke(isPause);
-        //pauseButtonUI.SwitchButtonSprite(isPause);
     }
 }

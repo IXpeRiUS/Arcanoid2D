@@ -9,7 +9,6 @@ public class PauseButtonUI : MonoBehaviour
 {
     [SerializeField] Sprite _pauseImage;
     [SerializeField] Sprite _resumeImage;
-    //[SerializeField] PauseMenuUI _pauseMenu;
     [SerializeField] UnityEngine.UI.Image _pauseButtonImage;
 
     private void Start()
