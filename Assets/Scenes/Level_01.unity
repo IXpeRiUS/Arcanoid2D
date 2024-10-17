@@ -179,7 +179,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2adb291329a828e498df32cf988e46eb, type: 2}
   m_sharedMaterial: {fileID: 7701552805744080199, guid: 2adb291329a828e498df32cf988e46eb, type: 2}
@@ -630,6 +630,7 @@ GameObject:
   - component: {fileID: 320148609}
   - component: {fileID: 320148610}
   - component: {fileID: 320148611}
+  - component: {fileID: 320148612}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -716,6 +717,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f096ae7aba5a05c4d8471c65dd102e61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &320148612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320148606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e853a380d94a1a54cb3e593155a2288b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &347764001
@@ -1141,7 +1154,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2adb291329a828e498df32cf988e46eb, type: 2}
   m_sharedMaterial: {fileID: 7701552805744080199, guid: 2adb291329a828e498df32cf988e46eb, type: 2}
@@ -1806,7 +1819,7 @@ GameObject:
   - component: {fileID: 1114354770}
   - component: {fileID: 1114354769}
   m_Layer: 5
-  m_Name: LabelScore
+  m_Name: LabelLife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2799,8 +2812,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7570d98948c29ab439c43965a36ebb47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 522148507}
-  bestScoreText: {fileID: 170588966}
+  _scoreText: {fileID: 522148507}
+  _bestScoreText: {fileID: 170588966}
 --- !u!4 &1474956536 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7206525273044459425, guid: 3ed7442946ef1754ca248d6522daaff7, type: 3}
@@ -2816,7 +2829,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1617359191}
   m_Layer: 5
-  m_Name: Score
+  m_Name: Life
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2925,7 +2938,7 @@ GameObject:
   - component: {fileID: 1748957545}
   - component: {fileID: 1748957544}
   m_Layer: 5
-  m_Name: Score
+  m_Name: Life
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2970,7 +2983,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2adb291329a828e498df32cf988e46eb, type: 2}
   m_sharedMaterial: {fileID: 7701552805744080199, guid: 2adb291329a828e498df32cf988e46eb, type: 2}
@@ -3056,8 +3069,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1754328299}
+  - component: {fileID: 1754328300}
   m_Layer: 5
-  m_Name: PlayerLives
+  m_Name: PlayerLife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3083,6 +3097,19 @@ RectTransform:
   m_AnchoredPosition: {x: 110, y: -490}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &1754328300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754328298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 396d6769f6bb4ac43be6a733cc1b3a37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lifeLabel: {fileID: 1748957544}
 --- !u!1 &1778579677
 GameObject:
   m_ObjectHideFlags: 0
@@ -3648,7 +3675,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0

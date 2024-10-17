@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class ScoreUI : MonoBehaviour
 {
-    public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI bestScoreText;
+    [SerializeField] TextMeshProUGUI _scoreText;
+    [SerializeField] TextMeshProUGUI _bestScoreText;
 
 
     private void Start()
@@ -18,11 +18,11 @@ public class ScoreUI : MonoBehaviour
     }
     private void UpdateScoreUI(int score)
     {
-        scoreText.text = score.ToString();
+        _scoreText.text = score.ToString();
     }
 
     private void UpdateBestScoreUI(int bestScore)
     {
-       bestScoreText.text = bestScore.ToString();
+       _bestScoreText.text = bestScore.ToString();
     }
 }

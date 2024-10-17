@@ -16,14 +16,6 @@ public class PauseMenuUI : MonoBehaviour
         }
     }
 
-    private void OnDisable()
-    {
-        if (GameManager.Instance != null)
-        {
-            GameManager.Instance.onPause -= TogglePauseMenu;
-        }
-    }
-
     private void TogglePauseMenu(bool pause)
     {
         // Включить меню паузы, если игра на паузе, и выключить, если пауза отключена
