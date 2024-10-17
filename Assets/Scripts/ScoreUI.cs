@@ -14,7 +14,8 @@ public class ScoreUI : MonoBehaviour
     {
         ScoreManager.Instance.OnScoreChanged += UpdateScoreUI;
         ScoreManager.Instance.OnBestScoreChanged += UpdateBestScoreUI;
-
+        UpdateScoreUI(ScoreManager.Instance.GetScore());
+        UpdateBestScoreUI(ScoreManager.Instance.GetBestScore());
     }
     private void UpdateScoreUI(int score)
     {
