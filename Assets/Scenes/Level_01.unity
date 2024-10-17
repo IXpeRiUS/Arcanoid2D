@@ -475,6 +475,7 @@ GameObject:
   - component: {fileID: 320148607}
   - component: {fileID: 320148609}
   - component: {fileID: 320148610}
+  - component: {fileID: 320148611}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -549,6 +550,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61308d92ff3b2514f9ced35431ede4e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &320148611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320148606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f096ae7aba5a05c4d8471c65dd102e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &347764001
@@ -734,7 +747,6 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
-  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -816,18 +828,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &519420033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f096ae7aba5a05c4d8471c65dd102e61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &522148505
 GameObject:
   m_ObjectHideFlags: 0
@@ -1327,7 +1327,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 519420033}
+      - m_Target: {fileID: 320148611}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: SoundSwitch
         m_Mode: 1
