@@ -7,24 +7,24 @@ using UnityEngine.UIElements;
 
 public class PauseButtonUI : MonoBehaviour
 {
-    [SerializeField] Sprite PauseImage;
-    [SerializeField] Sprite ResumeImage;
+    [SerializeField] Sprite _pauseImage;
+    [SerializeField] Sprite _resumeImage;
 
-    [SerializeField] UnityEngine.UI.Image buttonImage;
+    [SerializeField] UnityEngine.UI.Image _pauseButtonImage;
 
     private void Start()
     {
         GameManager.Instance.onPause += SwitchButtonSprite;
     }
-    public void SwitchButtonSprite(bool pause) // Исправлено имя метода
+    public void SwitchButtonSprite(bool pause)  
     {
         if (pause)
         {
-            buttonImage.sprite = ResumeImage;
+            _pauseButtonImage.sprite = _resumeImage;
         }
         else
         {
-            buttonImage.sprite = PauseImage;
+            _pauseButtonImage.sprite = _pauseImage;
         }
     }
 

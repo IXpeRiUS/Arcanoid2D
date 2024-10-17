@@ -1,9 +1,24 @@
+using System;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-
+    public static AudioManager Instance;
     private bool isSoundOn = true;
+    public Action<bool> onSound;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject); // Сохранение объекта между сценами
+        }
+        else
+        {
+            Destroy(gameObject); // Уничтожение дубликатов
+        }
+    }
 
 
 
@@ -14,6 +29,14 @@ public class AudioManager : MonoBehaviour
 
     public void SoundSwitch()
     {
+        if (isSoundOn)
+        {
+            onSound?.Invoke(true);
+        }
+        else
+        {
+            onSound?.Invoke(false);
+        }
         isSoundOn = !isSoundOn; // Переключение состояния звука
         UpdateAudioListener();  // Обновление состояния AudioListener
     }
