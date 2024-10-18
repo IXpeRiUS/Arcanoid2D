@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //меню пауза
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetButtonDown("Cancel"))
         {
             gameManager.TogglePause();
         }
