@@ -6,7 +6,7 @@ using UnityEngine;
 // красные просто уничтожить
 //синие превращаются в красные или с трещиной
 
-public class BallOnBrick : MonoBehaviour
+public class BrickBehaviour : MonoBehaviour
 {
     [SerializeField] BrickSpriteList _sprite;
     private BrickTag _brickTag;

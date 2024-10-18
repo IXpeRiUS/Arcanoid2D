@@ -884,7 +884,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: e59f97c0f7dd54145aa7bee6cd5c48e4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ac6fd65e81bc6d74c8144fb821a812b3, type: 3}
   m_Color: {r: 0.6754716, g: 0.6754716, b: 0.6754716, a: 0.101960786}
   m_FlipX: 0
   m_FlipY: 0
@@ -2353,8 +2353,8 @@ GameObject:
   - component: {fileID: 1129312938}
   - component: {fileID: 1129312941}
   - component: {fileID: 1129312943}
-  - component: {fileID: 1129312944}
   - component: {fileID: 1129312945}
+  - component: {fileID: 1129312946}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -2505,20 +2505,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxSpeed: 10
   MinSpeed: 6
---- !u!114 &1129312944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1129312937}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fabcb4ab9297c5a47bc70b5517c7b9bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _sprite: {fileID: 320148607}
-  _ballSpeedController: {fileID: 1129312943}
 --- !u!114 &1129312945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2532,6 +2518,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isForsed: 0
+--- !u!114 &1129312946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129312937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a00d8ea06bbff43a5ebb491143e871, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 320148607}
+  _ballSpeedController: {fileID: 1129312943}
 --- !u!1 &1130438293
 GameObject:
   m_ObjectHideFlags: 0
@@ -4621,7 +4621,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8176923655783833615, guid: abfcd8e19f043764da58d68d1701dbb3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4763,7 +4763,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8353375076070273109, guid: 1e11cf79dfd3a4a4ebc70db13c46df7a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
