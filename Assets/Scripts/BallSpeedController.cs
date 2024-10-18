@@ -5,7 +5,7 @@ using UnityEngine;
 public class BallSpeedController : MonoBehaviour
 {
     [Header("Ball Speed")]
-    public float Speed;
+    public float MaxSpeed;
     public float MinSpeed;
     private Rigidbody2D _rb;
 
@@ -24,9 +24,14 @@ public class BallSpeedController : MonoBehaviour
             _rb.velocity = _rb.velocity.normalized * MinSpeed;
         }
         // Если скорость больше максимальной, установим максимальную скорость
-        else if (currentSpeed > Speed)
+        else if (currentSpeed > MaxSpeed)
         {
-            _rb.velocity = _rb.velocity.normalized * Speed;
+            _rb.velocity = _rb.velocity.normalized * MaxSpeed;
         }
+    }
+
+    public float GetCurrentSpeed()
+    {
+        return _rb.velocity.magnitude;
     }
 }

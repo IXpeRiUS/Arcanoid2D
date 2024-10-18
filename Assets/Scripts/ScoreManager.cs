@@ -29,7 +29,6 @@ public class ScoreManager : MonoBehaviour
     {
         _bestScore = PlayerPrefs.GetInt("BestScore", 0);
     }
-
     public void AddScore(int score)
     {
         _score += score;

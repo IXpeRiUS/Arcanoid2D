@@ -1,13 +1,22 @@
 using System;
 using UnityEngine;
 
+
+
+// красные просто уничтожить
+//синие превращаются в красные или с трещиной
+
 public class BallOnBrick : MonoBehaviour
 {
     //[SerializeField] BrickSpriteList _sprite;
     //private BrickTag _brickTag;
+    [SerializeField] BallSpeedController _ballSpeedController;
+    private float _scoreMultiply = 1f;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
+
 
         string tag = collision.gameObject.tag;
         SpriteRenderer spriteRenderer = collision.gameObject.GetComponent<SpriteRenderer>();
@@ -53,7 +62,7 @@ public class BallOnBrick : MonoBehaviour
                 Destroy(collision.gameObject);
                 break;
             case "Red01Brick":
-                DestroyBrick();
+                CalculateScore(_scoreMultiply);
                 Destroy(collision.gameObject);
                 break;
             case "Yellow01Brick":
@@ -62,14 +71,13 @@ public class BallOnBrick : MonoBehaviour
         }
     }
 
-
-    public void DestroyBrick()
+    private void CalculateScore(float scoreMultiply)
     {
-        ScoreManager.Instance.AddScore(100);
+        float speed = _ballSpeedController.GetCurrentSpeed();
+        speed *= scoreMultiply;
+        ScoreManager.Instance.AddScore((int)speed * 10); //умножить на 10 для красивого счета
+
     }
-
-
-
 
 
 
