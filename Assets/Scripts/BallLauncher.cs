@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BallForce : MonoBehaviour
+public class BallLauncher : MonoBehaviour
 {
     Rigidbody2D rb;
     public bool isForsed = false; //шар в состоянии не запущен
@@ -12,7 +12,7 @@ public class BallForce : MonoBehaviour
     }
 
     //запуск шара находящегося в состоянии покоя
-    public void AddForceBall()
+    public void LaunchBall()
     {
         rb.AddForce(new Vector3(Random.Range(-3f, 2f), Random.Range(1f, 2f)));
         isForsed = true;//шар в состоянии запущен
