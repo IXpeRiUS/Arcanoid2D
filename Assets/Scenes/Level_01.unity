@@ -628,7 +628,6 @@ GameObject:
   - component: {fileID: 320148608}
   - component: {fileID: 320148607}
   - component: {fileID: 320148609}
-  - component: {fileID: 320148610}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -693,18 +692,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseButtonUI: {fileID: 1255821336}
   isPause: 0
---- !u!114 &320148610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 320148606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61308d92ff3b2514f9ced35431ede4e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &347764001
 GameObject:
   m_ObjectHideFlags: 0
@@ -1697,6 +1684,7 @@ MonoBehaviour:
   _audioManager: {fileID: 917070765}
   _gameManager: {fileID: 320148609}
   _playerLifeManager: {fileID: 763699066}
+  _scoreManager: {fileID: 1799596258}
 --- !u!4 &1047101663
 Transform:
   m_ObjectHideFlags: 0
@@ -3257,6 +3245,50 @@ Transform:
   - {fileID: 1825218001}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1799596257
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1799596259}
+  - component: {fileID: 1799596258}
+  m_Layer: 0
+  m_Name: ScoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1799596258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799596257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61308d92ff3b2514f9ced35431ede4e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1799596259
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799596257}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1706.3363, y: 507.85696, z: -1.727365}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1825218001 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6439299768971621064, guid: abfcd8e19f043764da58d68d1701dbb3, type: 3}
@@ -4476,6 +4508,7 @@ SceneRoots:
   - {fileID: 917070766}
   - {fileID: 320148608}
   - {fileID: 763699067}
+  - {fileID: 1799596259}
   - {fileID: 519420032}
   - {fileID: 177613506}
   - {fileID: 1778579678}

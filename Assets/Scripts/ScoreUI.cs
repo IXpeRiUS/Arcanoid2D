@@ -9,13 +9,39 @@ public class ScoreUI : MonoBehaviour
     [SerializeField] TextMeshProUGUI _scoreText;
     [SerializeField] TextMeshProUGUI _bestScoreText;
 
-
     private void Start()
     {
-        ScoreManager.Instance.OnScoreChanged += UpdateScoreUI;
-        ScoreManager.Instance.OnBestScoreChanged += UpdateBestScoreUI;
-        UpdateScoreUI(ScoreManager.Instance.GetScore());
-        UpdateBestScoreUI(ScoreManager.Instance.GetBestScore());
+        if (ScoreManager.Instance != null)
+        {
+            UpdateScoreUI(ScoreManager.Instance.GetScore());
+            UpdateBestScoreUI(ScoreManager.Instance.GetBestScore());
+        }
+        else
+        {
+            Debug.LogError("ScoreManager instance is null in Start");
+        }
+    }
+
+    private void OnEnable()
+    {
+        if (ScoreManager.Instance != null)
+        {
+            ScoreManager.Instance.OnScoreChanged += UpdateScoreUI;
+            ScoreManager.Instance.OnBestScoreChanged += UpdateBestScoreUI;
+        }
+        else
+        {
+            Debug.LogError("ScoreManager instance is null in OnEnable");
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (ScoreManager.Instance != null)
+        {
+            ScoreManager.Instance.OnScoreChanged -= UpdateScoreUI;
+            ScoreManager.Instance.OnBestScoreChanged -= UpdateBestScoreUI;
+        }
     }
     private void UpdateScoreUI(int score)
     {

@@ -44,22 +44,6 @@ public class GameManager : MonoBehaviour
 
     private void ResumeGame()
     {
-        StartCoroutine(ResumeGameSmoothly());
-    }
-
-    private IEnumerator ResumeGameSmoothly()
-    {
-        float duration = 0.3f;
-        float currentTime = 0f;
-        float initialTimeScale = Time.timeScale;
-
-        while (currentTime < duration)
-        {
-            currentTime += Time.unscaledDeltaTime;
-            Time.timeScale = Mathf.Lerp(initialTimeScale, 1f, currentTime / duration);
-            yield return null;
-        }
-
         Time.timeScale = 1f;
         isPause = false;
         onPause?.Invoke(isPause);

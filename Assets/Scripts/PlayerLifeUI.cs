@@ -9,8 +9,17 @@ public class PlayerLifeUI : MonoBehaviour
 
     private void Start()
     {
-        PlayerLifeManager.Instance.OnPlayerLife += UpdateLifeCount;
         UpdateLifeCount(PlayerLifeManager.Instance.GetLifeCount());
+    }
+
+    private void OnEnable()
+    {
+        PlayerLifeManager.Instance.OnPlayerLife += UpdateLifeCount;
+    }
+
+    private void OnDisable()
+    {
+        PlayerLifeManager.Instance.OnPlayerLife -= UpdateLifeCount;
     }
 
     private void UpdateLifeCount(int life)

@@ -7,6 +7,8 @@ public class Bootstrap : MonoBehaviour
     [SerializeField] AudioManager _audioManager;
     [SerializeField] GameManager _gameManager;
     [SerializeField] PlayerLifeManager _playerLifeManager;
+    [SerializeField] ScoreManager _scoreManager;
+
 
     private void Awake()
     {
@@ -14,5 +16,7 @@ public class Bootstrap : MonoBehaviour
         _audioManager.Initialize();
         _gameManager.Initialize();
         _playerLifeManager.Initialize();
+        _scoreManager.Initialize();
+
     }
 }
