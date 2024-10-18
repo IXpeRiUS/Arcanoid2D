@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 
     public Action<bool> onPause;
 
-    private void Awake()
+    public void Initialize()
     {
         if (Instance == null)
         {
