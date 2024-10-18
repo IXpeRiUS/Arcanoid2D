@@ -9,9 +9,28 @@ public class SoundButtonUI : MonoBehaviour
     [SerializeField] UnityEngine.UI.Image _soundButtonImage;
 
 
-    private void Start()
+    private void OnEnable()
     {
-        AudioManager.Instance.onSound += SwitchAudioButtonSprite;
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.onSound += SwitchAudioButtonSprite;
+        }
+        else
+        {
+            Debug.Log("AudioManager instance is null in OnEnable");
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.onSound -= SwitchAudioButtonSprite;
+        }
+        else
+        {
+            //Debug.Log("AudioManager instance is null in OnDisable");
+        }
     }
 
     public void SwitchAudioButtonSprite(bool sound)

@@ -6,23 +6,50 @@ using UnityEngine;
 
 public class ScoreUI : MonoBehaviour
 {
-    public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI bestScoreText;
-
+    [SerializeField] TextMeshProUGUI _scoreText;
+    [SerializeField] TextMeshProUGUI _bestScoreText;
 
     private void Start()
     {
-        ScoreManager.Instance.OnScoreChanged += UpdateScoreUI;
-        ScoreManager.Instance.OnBestScoreChanged += UpdateBestScoreUI;
+        if (ScoreManager.Instance != null)
+        {
+            UpdateScoreUI(ScoreManager.Instance.GetScore());
+            UpdateBestScoreUI(ScoreManager.Instance.GetBestScore());
+        }
+        else
+        {
+            Debug.LogError("ScoreManager instance is null in Start");
+        }
+    }
 
+    private void OnEnable()
+    {
+        if (ScoreManager.Instance != null)
+        {
+            ScoreManager.Instance.OnScoreChanged += UpdateScoreUI;
+            ScoreManager.Instance.OnBestScoreChanged += UpdateBestScoreUI;
+        }
+        else
+        {
+            Debug.LogError("ScoreManager instance is null in OnEnable");
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (ScoreManager.Instance != null)
+        {
+            ScoreManager.Instance.OnScoreChanged -= UpdateScoreUI;
+            ScoreManager.Instance.OnBestScoreChanged -= UpdateBestScoreUI;
+        }
     }
     private void UpdateScoreUI(int score)
     {
-        scoreText.text = score.ToString();
+        _scoreText.text = score.ToString();
     }
 
     private void UpdateBestScoreUI(int bestScore)
     {
-       bestScoreText.text = bestScore.ToString();
+       _bestScoreText.text = bestScore.ToString();
     }
 }

@@ -7,7 +7,7 @@ public class AudioManager : MonoBehaviour
     private bool isSoundOn = true;
     public Action<bool> onSound;
 
-    private void Awake()
+    public void Initialize()
     {
         if (Instance == null)
         {
@@ -27,7 +27,7 @@ public class AudioManager : MonoBehaviour
         AudioListener.pause = !isSoundOn; // Логическое отрицание для контроля паузы
     }
 
-    public void SoundSwitch()
+    public void ToggleAudio()
     {
         if (isSoundOn)
         {

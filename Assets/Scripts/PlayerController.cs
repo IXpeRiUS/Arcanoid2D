@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] GameManager gameManager;
-    [SerializeField] BallForce ballForce;
+    [SerializeField] BallLauncher ballLauncher;
     private float _movePlayer;
     private Vector3 _position;
     public float Speed;
@@ -27,14 +27,17 @@ public class PlayerController : MonoBehaviour
         // Обновляем позицию объекта
         transform.position = _position;
 
-        //запуск шара 
+        //запуск шара, если не запущен
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            ballForce.AddForceBall();
+            if (!ballLauncher.isForsed)
+            {
+                ballLauncher.LaunchBall();
+            }
         }
 
         //меню пауза
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetButtonDown("Cancel"))
         {
             gameManager.TogglePause();
         }

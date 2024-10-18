@@ -1,14 +1,20 @@
 using System;
 using UnityEngine;
 
-public class BallOnBrick : MonoBehaviour
+
+
+// красные просто уничтожить
+//синие превращаются в красные или с трещиной
+
+public class BrickBehaviour : MonoBehaviour
 {
     [SerializeField] BrickSpriteList _sprite;
     private BrickTag _brickTag;
+    [SerializeField] BallSpeedController _ballSpeedController;
+    private float _scoreMultiply = 1f;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
         string tag = collision.gameObject.tag;
         SpriteRenderer spriteRenderer = collision.gameObject.GetComponent<SpriteRenderer>();
         switch (tag)
@@ -17,7 +23,9 @@ public class BallOnBrick : MonoBehaviour
                 Destroy(collision.gameObject);
                 break;
             case "Blue01Brick":
-                Destroy(collision.gameObject);
+                spriteRenderer.sprite = _sprite.sprites[13];
+                collision.gameObject.tag = "Red01Brick";
+                CalculateScore(_scoreMultiply);
                 break;
             case "Blue02Brick":
                 Destroy(collision.gameObject);
@@ -35,7 +43,9 @@ public class BallOnBrick : MonoBehaviour
                 Destroy(collision.gameObject);
                 break;
             case "Grey01Brick":
-                Destroy(collision.gameObject);
+                spriteRenderer.sprite = _sprite.sprites[3];
+                collision.gameObject.tag = "Blue01Brick";
+                CalculateScore(_scoreMultiply);
                 break;
             case "Orange01Brick":
                 Destroy(collision.gameObject);
@@ -53,7 +63,7 @@ public class BallOnBrick : MonoBehaviour
                 Destroy(collision.gameObject);
                 break;
             case "Red01Brick":
-                DestroyBrick();
+                CalculateScore(_scoreMultiply);
                 Destroy(collision.gameObject);
                 break;
             case "Yellow01Brick":
@@ -62,14 +72,13 @@ public class BallOnBrick : MonoBehaviour
         }
     }
 
-
-    public void DestroyBrick()
+    private void CalculateScore(float scoreMultiply)
     {
-        ScoreManager.Instance.AddScore(100);
+        float speed = _ballSpeedController.GetCurrentSpeed();
+        speed *= scoreMultiply;
+        ScoreManager.Instance.AddScore((int)speed * 10); //умножить на 10 для красивого счета
+
     }
-
-
-
 
 
 

@@ -8,10 +8,10 @@ public class ScoreManager : MonoBehaviour
     public event Action<int> OnScoreChanged;
     public event Action<int> OnBestScoreChanged;
 
-    private int _currentScore;
+    private int _score;
     private int _bestScore;
 
-    private void Awake()
+    public void Initialize()
     {
         if (Instance == null)
         {
@@ -22,19 +22,19 @@ public class ScoreManager : MonoBehaviour
         {
             Destroy(gameObject); // Уничтожаем дублирующий экземпляр
         }
+
     }
 
     private void Start()
     {
         _bestScore = PlayerPrefs.GetInt("BestScore", 0);
     }
-
     public void AddScore(int score)
     {
-        _currentScore += score;
-        OnScoreChanged?.Invoke(_currentScore);
+        _score += score;
+        OnScoreChanged?.Invoke(_score);
         
-        AddBestScore(_currentScore);
+        AddBestScore(_score);
         
         //Debug.Log($"Current: {_currentScore }" );
     }
@@ -49,10 +49,28 @@ public class ScoreManager : MonoBehaviour
         OnBestScoreChanged?.Invoke(_bestScore);
     }
 
+    public void SaveScore(int score)
+    {
+        PlayerPrefs.SetInt("Score", score);
+        PlayerPrefs.Save();
+        Debug.Log($"{score} saved.");
+    }
+
+
     private void SaveBestScore(int bestScore)
     {
         PlayerPrefs.SetInt("BestScore", bestScore);
         PlayerPrefs.Save(); // Сохранение значений PlayerPrefs
         Debug.Log($"{bestScore} saved.");
+    }
+
+    public int GetScore()
+    {
+        return _score;
+    }
+
+    public int GetBestScore()
+    {
+        return _bestScore;
     }
 }

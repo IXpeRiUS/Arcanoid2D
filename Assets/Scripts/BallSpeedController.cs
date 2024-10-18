@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BallSpeedLimiter : MonoBehaviour
+public class BallSpeedController : MonoBehaviour
 {
     [Header("Ball Speed")]
-    public float Speed;
+    public float MaxSpeed;
     public float MinSpeed;
     private Rigidbody2D _rb;
 
@@ -24,9 +24,14 @@ public class BallSpeedLimiter : MonoBehaviour
             _rb.velocity = _rb.velocity.normalized * MinSpeed;
         }
         // Если скорость больше максимальной, установим максимальную скорость
-        else if (currentSpeed > Speed)
+        else if (currentSpeed > MaxSpeed)
         {
-            _rb.velocity = _rb.velocity.normalized * Speed;
+            _rb.velocity = _rb.velocity.normalized * MaxSpeed;
         }
+    }
+
+    public float GetCurrentSpeed()
+    {
+        return _rb.velocity.magnitude;
     }
 }

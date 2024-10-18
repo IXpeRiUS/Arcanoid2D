@@ -1,27 +1,18 @@
+using Unity.VisualScripting;
 using UnityEngine;
 public class PauseMenuUI : MonoBehaviour
 {
     [SerializeField] private GameObject _pauseMenuUI;
 
-    private void Start()
+    private void OnEnable()
     {
-        if (GameManager.Instance != null)
-        {
-            GameManager.Instance.onPause += TogglePauseMenu;
-            //Debug.Log("Event PAUSE enabled");
-        }
-        else
-        {
-            Debug.LogError("GameManager instance is null. Ensure it is initialized before PauseMenuUI.");
-        }
+        GameManager.Instance.onPause += TogglePauseMenu;
+        
     }
 
     private void OnDisable()
     {
-        if (GameManager.Instance != null)
-        {
-            GameManager.Instance.onPause -= TogglePauseMenu;
-        }
+        GameManager.Instance.onPause -= TogglePauseMenu;
     }
 
     private void TogglePauseMenu(bool pause)
