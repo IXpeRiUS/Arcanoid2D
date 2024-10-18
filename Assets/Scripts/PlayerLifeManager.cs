@@ -11,7 +11,7 @@ public class PlayerLifeManager : MonoBehaviour
     public Action<int> OnPlayerLife;
 
 
-    private void Awake()
+    public void Initialize()
     {
         if (Instance == null)
         {
@@ -24,7 +24,6 @@ public class PlayerLifeManager : MonoBehaviour
         }
     }
 
-
     public int GetLifeCount()
     {
         return _playersLife;
@@ -35,7 +34,6 @@ public class PlayerLifeManager : MonoBehaviour
         _playersLife = Mathf.Clamp(_playersLife, 0, 5); // Ограничиваем жизнями от 0 до 5
         OnPlayerLife?.Invoke(_playersLife);
     }
-
 
     public void RemoveLife(int life)
     {
