@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BallSpeedLimiter : MonoBehaviour
+public class BallSpeedController : MonoBehaviour
 {
     [Header("Ball Speed")]
     public float Speed;

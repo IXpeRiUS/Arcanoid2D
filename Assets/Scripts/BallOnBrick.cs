@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class BallOnBrick : MonoBehaviour
 {
-    [SerializeField] BrickSpriteList _sprite;
-    private BrickTag _brickTag;
+    //[SerializeField] BrickSpriteList _sprite;
+    //private BrickTag _brickTag;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
