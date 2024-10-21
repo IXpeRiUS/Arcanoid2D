@@ -2126,7 +2126,7 @@ GameObject:
   - component: {fileID: 1078444660}
   m_Layer: 10
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: BottomWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2207,7 +2207,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1078444658}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: c5f19cdc53464ab4a8d23d1050f1e39a, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2227,7 +2227,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2597,6 +2597,8 @@ GameObject:
   - component: {fileID: 1129312943}
   - component: {fileID: 1129312945}
   - component: {fileID: 1129312946}
+  - component: {fileID: 1129312947}
+  - component: {fileID: 1129312948}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -2759,6 +2761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f3e9f71117e8c14f983c949256f53ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bpl: {fileID: 0}
   isForsed: 0
 --- !u!114 &1129312946
 MonoBehaviour:
@@ -2774,6 +2777,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sprite: {fileID: 320148607}
   _ballSpeedController: {fileID: 1129312943}
+--- !u!114 &1129312947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129312937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af2ec704bb0c9c045874f79648d5e10e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ballLauncher: {fileID: 1129312945}
+--- !u!114 &1129312948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129312937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6acbe7267acb3b488ffce8fc93e8709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerPosition: {fileID: 1198522211}
+  _launcher: {fileID: 1129312945}
 --- !u!1 &1130438293
 GameObject:
   m_ObjectHideFlags: 0
@@ -3040,17 +3070,19 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.85, y: 0.09}
-      - {x: -0.74, y: 0.20627809}
+    - - {x: -0.88, y: -0.12}
+      - {x: -0.85, y: 0.09}
+      - {x: -0.74, y: 0.2}
       - {x: -0.65, y: 0.23}
       - {x: -0.43, y: 0.27}
-      - {x: 0, y: 0.34390727}
+      - {x: 0, y: 0.35}
       - {x: 0.43, y: 0.27}
       - {x: 0.65, y: 0.23}
-      - {x: 0.74, y: 0.17872071}
+      - {x: 0.74, y: 0.2}
       - {x: 0.85, y: 0.09}
-      - {x: 0.9, y: -0.25}
-      - {x: -0.9, y: -0.25}
+      - {x: 0.88, y: -0.09}
+      - {x: 1, y: -0.25}
+      - {x: -1, y: -0.25}
   m_UseDelaunayMesh: 0
 --- !u!224 &1222662278 stripped
 RectTransform:
@@ -3110,6 +3142,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1289148031 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5067417275996243918, guid: 101d9c5f3e70bb2438070295dd5b1d47, type: 3}
+  m_PrefabInstance: {fileID: 1380800593}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1380800593
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3262,6 +3305,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonSound
       objectReference: {fileID: 0}
+    - target: {fileID: 8799942860092855177, guid: 101d9c5f3e70bb2438070295dd5b1d47, type: 3}
+      propertyPath: _text
+      value: 
+      objectReference: {fileID: 1289148031}
     - target: {fileID: 8799942860092855177, guid: 101d9c5f3e70bb2438070295dd5b1d47, type: 3}
       propertyPath: _soundOn
       value: 
@@ -4262,7 +4309,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2048662965
 RectTransform:
   m_ObjectHideFlags: 0

@@ -30,10 +30,7 @@ public class PlayerController : MonoBehaviour
         //запуск шара, если не запущен
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (!ballLauncher.isForsed)
-            {
-                ballLauncher.LaunchBall();
-            }
+             ballLauncher.LaunchBall();
         }
 
         //меню пауза

@@ -20,6 +20,7 @@ TagManager:
   - Pink03Brick
   - Red01Brick
   - Yellow01Brick
+  - BottomWall
   layers:
   - Default
   - TransparentFX

@@ -37,14 +37,12 @@ public class PlayerLifeManager : MonoBehaviour
 
     public void RemoveLife(int life)
     {
+        _playersLife -= life;
+        OnPlayerLife?.Invoke(_playersLife);
         if (_playersLife < 0)
         {
             //TODO GAMEOVER
         }
-        else
-        {
-            _playersLife -= life;
-            OnPlayerLife?.Invoke(_playersLife);
-        }
+
     }
 }

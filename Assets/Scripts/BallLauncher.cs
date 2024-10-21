@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BallLauncher : MonoBehaviour
 {
-    Rigidbody2D rb;
+    [SerializeField] BallPositionLaunch _bpl;
+    private Rigidbody2D rb;
     public bool isForsed = false; //шар в состоянии не запущен
     void Start()
     {
@@ -14,7 +15,10 @@ public class BallLauncher : MonoBehaviour
     //запуск шара находящегося в состоянии покоя
     public void LaunchBall()
     {
-        rb.AddForce(new Vector3(Random.Range(-3f, 2f), Random.Range(1f, 2f)));
-        isForsed = true;//шар в состоянии запущен
+        if (!isForsed)
+        {
+            rb.AddForce(new Vector3(Random.Range(-3f, 2f), Random.Range(1f, 2f))); //импульс запуска шара в случайное направление вверх влево/вправо относительно центра игрока
+            isForsed = true;//шар в состоянии запущен, подача импульса запрещена
+        }
     }
 }
