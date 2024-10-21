@@ -6,9 +6,12 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     [SerializeField] private PauseButtonUI pauseButtonUI;
+    [SerializeField] GameOverMenuUI _overMenuUI;
     public bool isPause = false;
+    public bool isGameOver = false;
 
     public Action<bool> onPause;
+    public Action<bool> onGameOver;
 
     public void Initialize()
     {
@@ -25,6 +28,7 @@ public class GameManager : MonoBehaviour
 
     public void TogglePause()
     {
+        _overMenuUI.GameOverText(isGameOver);
         if (!isPause)
         {
             PauseGame();

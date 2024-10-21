@@ -11,6 +11,7 @@ public class BrickBehaviour : MonoBehaviour
     [SerializeField] BrickSpriteList _sprite;
     private BrickTag _brickTag;
     [SerializeField] BallSpeedController _ballSpeedController;
+    [SerializeField] BonusManager _bonusManager;
     private float _scoreMultiply = 1f;
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -65,6 +66,7 @@ public class BrickBehaviour : MonoBehaviour
             case "Red01Brick":
                 CalculateScore(_scoreMultiply);
                 Destroy(collision.gameObject);
+                _bonusManager.AddBonus();
                 break;
             case "Yellow01Brick":
                 Destroy(collision.gameObject);
