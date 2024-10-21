@@ -1,13 +1,14 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 public class PauseMenuUI : MonoBehaviour
 {
     [SerializeField] private GameObject _pauseMenuUI;
-
+    [SerializeField] GameObject _pauseButton;
+    [SerializeField] private GameObject _soundButton;
     private void OnEnable()
     {
         GameManager.Instance.onPause += TogglePauseMenu;
-        
     }
 
     private void OnDisable()
@@ -17,16 +18,10 @@ public class PauseMenuUI : MonoBehaviour
 
     private void TogglePauseMenu(bool pause)
     {
-        // Включить меню паузы, если игра на паузе, и выключить, если пауза отключена
-        if (pause)
-        {
-            _pauseMenuUI.SetActive(true); // Включить меню паузы
-            //Debug.Log("PauseON");
-        }
-        else
-        {
-            _pauseMenuUI.SetActive(false); // Выключить меню паузы
-            //Debug.Log("PauseOFF");
-        }
+        _pauseMenuUI.SetActive(pause); // Включить меню паузы
+        _pauseButton.SetActive(!pause); // Отключить кнопку на боковой панели игры для красоты
+        _soundButton.SetActive(!pause); // Отключить кнопку звука
     }
+
+
 }
