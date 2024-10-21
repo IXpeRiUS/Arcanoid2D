@@ -6,7 +6,8 @@ using UnityEngine;
 public class PlayerLifeManager : MonoBehaviour
 {
     [Header("Начальное количество жизней игрока:")]
-    [SerializeField] int _playersLife = 2;
+    [SerializeField, Range(0,5)] int _playersLife = 2;
+    [SerializeField] GameOverMenuUI _gameOverMenuUI;
     public static PlayerLifeManager Instance;
     public Action<int> OnPlayerLife;
 
@@ -39,9 +40,10 @@ public class PlayerLifeManager : MonoBehaviour
     {
         _playersLife -= life;
         OnPlayerLife?.Invoke(_playersLife);
+        
         if (_playersLife < 0)
         {
-            //TODO GAMEOVER
+            _gameOverMenuUI.GameOver();
         }
 
     }
