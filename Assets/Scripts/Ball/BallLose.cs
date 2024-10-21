@@ -12,7 +12,7 @@ public class BallLose : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "BottomWall")
+        if (collision.CompareTag("BottomWall"))
         {
             PlayerLifeManager.Instance.RemoveLife(1);
             _rb.velocity = Vector3.zero;
